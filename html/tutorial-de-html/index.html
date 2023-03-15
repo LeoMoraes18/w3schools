@@ -16,8 +16,25 @@
     <body>
         <!-- os titulos são definidos com as tags de h1 ate h6 segundo sua importância-->
         <h1 style="font-size: 60px;">Heading 1</h1>
-        <!-- a elemento para definir um link especificando no href seguido do titulo-->
-        <a href="https://www.w3schools.com">Meu primeiro link</a>
+        <!-- a elemento para definir um link especificando no href seguido do titulo.
+            target atributo especifica onde abrir o documento vinculado:
+            _self - padrão.abre o documento na mesma janela;
+            _blank - abre o ducumento em uma nova janela ou guia;
+            _parent - abre o documento no quadro pai;
+            _top - abre o documento em todo o corpo da janela
+        -->
+
+        <!-- LINKS
+            o <a>elemento para definir um link
+            o href atributo para definir o endereço do link
+            o target atributo para definir onde abrir o documento vinculado
+            o <img> elemento (inside <a>) para usar uma imagem como link
+            o mailto: esquema dentro do hrefatributo para criar um link que abra o programa de e-mail do usuário
+        -->
+        <a href="https://www.w3schools.com" title="Vá para a seção HTML do W3Schools">Meu primeiro link</a>
+        <br>
+        <!-- onclick="document.location='defaut.asp' -->
+        <button>HTML tutorial</button>
         
         <!-- p elemento defini um parágrafo -->
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, similique. Iste nisi animi reprehenderit ipsa, sunt accusantium illo quos ullam modi quibusdam iusto omnis dolore veniam. Officiis molestiae vel tenetur!</p>
@@ -30,16 +47,26 @@
         </picture>
         -->
 
+        <!-- citações
+            <blockquote cite="url"> elemento HTML define uma seção que é citada de outra fonte.
+            <q> a tag HTML define uma citação curta.
+            <abbr> a tag HTML define uma abreviação ou um acrônimo.
+            <address> a tag define as informações de contato do autor.
+            <cite> tag define o título de uma  obra criativa.
+            <bdo>é usada para substituir a direção do texto atual
+        -->
+
         <h2>Uma tabela em html</h2>
 
         <!-- <table> tag para definir tabela-->
         <table style="width: 100%;">
-            <tr>
-                <th>Company</th>
+            <tr> <!-- significa linha da tabela-->
+                <th>Company</th> <!-- th significa cabeçalho da tabela-->
                 <th>Contact</th>
                 <th>Country</th>
             </tr>
             <tr>
+                <!-- <td></td> significa dados da tabela-->
                 <td>Alfreds Futterkiste</td>
                 <td>Maria Anders</td>
                 <td>Germany</td>           
@@ -50,5 +77,18 @@
                 <td>Mexico</td>
             </tr>
         </table>
+
+        <!-- LISTAS-->
+        <ul> <!--lista não ordenada-->
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+
+        <ol> <!-- lista ordenada-->
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ol>
     </body>
 </html>
