@@ -6,11 +6,15 @@
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <title>Tutotial de HTML</title>
     
-        <!-- style elemento função do css para estilizar -->
+        <!-- style elemento função do css para estilizar;
+        para criar uma classe: escrever um ponto(.),
+        seguindo de um nome de classe. em seguida,
+        definir as propriedades CSS entre chaves {}-->
         <style>
             table , th, td {
                 border: 1px solid black ;
             }
+            
             .city {
                 background-color: tomato;
                 color: white;
@@ -22,6 +26,13 @@
             .note {
                 font-size: 120%;
                 color: red;
+            }
+
+            #myHeader {
+                background-color: lightblue;
+                color: black;
+                padding: 40px;
+                text-align: center;
             }
         </style>
     </head>
@@ -45,7 +56,8 @@
         -->
         <a href="https://www.w3schools.com" title="Vá para a seção HTML do W3Schools">Meu primeiro link</a> |
         <!-- onclick="document.location='defaut.asp' -->
-        <button>HTML tutorial</button>
+        <button>HTML tutorial</button> |
+        <a href="#C4">Pular para capítulo 4</a>
         <hr>
         <!-- p elemento defini um parágrafo -->
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, similique. Iste nisi animi reprehenderit ipsa, sunt accusantium illo quos ullam modi quibusdam iusto omnis dolore veniam. Officiis molestiae vel tenetur!</p>
@@ -140,6 +152,8 @@
         <hr>
 
         <h2>Atributo de classe em HTML</h2>
+        <!-- O atributo class é usado para especificar uma classe;
+        varios elementos podem compartilhar a mesma classe. -->
         <div class="city">
             <h2>London</h2>
             <p>London is the capital of england.</p>
@@ -157,5 +171,36 @@
             <h1>My <span class="note">Important</span> Heading</h1>
             <p>This is some <span class="note">important</span> text.</p>
         
+            <!-- os elementos podem pertencer a mais de uma classe,
+            so separalas comespaço, e diferents elementos podem 
+            apontar para o mesmo nome de classe.
+            o nome classe pode tambem ser usado pelo JavaScript-->
+            <hr>
+            <h2>Atributo de identificação html</h2>
+            <!-- O atributo HTML idé usado para especificar um 
+                id exclusivo para um elemento HTML. Você não pode
+                ter mais de um elemento com o mesmo id em um documento HTML.
+                    Usando o atributo id
+                O idatributo especifica um id exclusivo para um elemento HTML. O valor do id atributo deve ser exclusivo no documento HTML.
+
+                O idatributo é usado para apontar para uma declaração de estilo específica em uma folha de estilo. Também é usado pelo JavaScript para acessar e manipular o elemento com o id específico.
+
+                A sintaxe para id é: escreva um caractere hash (#), seguido por um nome de id. Em seguida, defina as propriedades CSS entre chaves {}.
+
+                No exemplo a seguir temos um <h1>elemento que aponta para o id de nome "myHeader". Este <h1> elemento será estilizado de acordo com a #myHeader definição de estilo na seção head:
+            -->
+            <h1 id="myHeader">My Header</h1>
+
+            <h3 id="C4">marcando onde o link capílo 4 irá trazer</h3>
+            <br>
+            <h2>Usando o atributo id em JavaScript</h2>
+            <h1 id="mudarTexto">olá mundo!</h1>
+            <button onclick="displayResult()">Alterar Texto</button>
+
+            <script>
+                function displayResult() {
+                    document.getElementById("mudarTexto").innerHTML = "Tenha um bom dia!";
+                }
+            </script>
     </body>
 </html>
