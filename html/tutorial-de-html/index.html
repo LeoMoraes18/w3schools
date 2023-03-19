@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8"><!--define o conjunto de caracteres usado-->
+        <meta name="description" content="Free Web tutorials"><!--define umadescrição para a página web-->
+        <meta name="keywords" content="HTML, CSS, JavaScript"><!--define palavras-chave para motores de busca-->
+        <meta name="author" content="Leonardo Oliveira"><!--define autor da página-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--configura a janela de visualização para que o site tenha uma boa aparência em todos os dispositivos-->
         <!-- para colocar um favicon, imagem a esquerda do titulo da pagina.-->
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <title>Tutotial de HTML</title>
@@ -35,6 +39,16 @@
                 text-align: center;
             }
         </style>
+
+        <!-- função JavaScript que é usada no id mudarTexto. -->
+        <script> 
+            function displayResult() {
+                document.getElementById("mudarTexto").innerHTML = "Tenha um bom dia!";
+            }
+        </script>
+        <!--
+        <base href="https://www.w3schools.com" target="_blank">elemento especifica a URL base e/ou destino para todas as URLs relativas em uma página.-->
+        
     </head>
     <body>
         <!-- os titulos são definidos com as tags de h1 ate h6 segundo sua importância-->
@@ -54,7 +68,7 @@
             o <img> elemento (inside <a>) para usar uma imagem como link
             o mailto: esquema dentro do hrefatributo para criar um link que abra o programa de e-mail do usuário
         -->
-        <a href="https://www.w3schools.com" title="Vá para a seção HTML do W3Schools">Meu primeiro link</a> |
+        <a href="https:www.w3schools.com" title="Vá para a seção HTML do W3Schools">Meu primeiro link</a> |
         <!-- onclick="document.location='defaut.asp' -->
         <button>HTML tutorial</button> |
         <a href="#C4">Pular para capítulo 4</a>
@@ -196,11 +210,20 @@
             <h2>Usando o atributo id em JavaScript</h2>
             <h1 id="mudarTexto">olá mundo!</h1>
             <button onclick="displayResult()">Alterar Texto</button>
-
-            <script>
-                function displayResult() {
-                    document.getElementById("mudarTexto").innerHTML = "Tenha um bom dia!";
-                }
-            </script>
+            
+            <hr>
+            <h2>Iframes HTML</h2>
+            <!-- Um iframe é usado para exibir uma página da web dentro de uma página da web-->
+            <iframe src="index.html" name="iframe_a" style="border: 2px solid blue;height: 400px;width: 600px;" title="iframe exemplo"></iframe>
+            <br>
+            <h3>Iframe - Alvo para um link</h3>
+            <p><a href="http://www.google.com" target="iframe_a">google</a></p>
+            <br>
+            <hr>
+            <h2>HTMLJavaScript_</h2> <!-- O JavaScript torna as paginas mais dinâmicas e interativas-->
+            <h4>Exemplo</h4>
+            <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Clique aqui para ver a data e a hora</button>
+            <p id="demo"></p>
+            <!-- a tag noscript define um conteúdo alternativo a ser exibido para usuários sem suporte a script -->
     </body>
 </html>
