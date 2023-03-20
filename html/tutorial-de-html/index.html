@@ -38,6 +38,36 @@
                 padding: 40px;
                 text-align: center;
             }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .left {
+                background-color: #2196f3;
+                padding: 20px;
+                float: left;
+                width: 20px; /* A largura é 20px, por padão */
+            }
+
+            .main {
+                background-color: #f1f1f1;
+                padding: 20px;
+                float: left;
+                width: 60px;/* A largura é 60px, por padão */
+            }
+
+            .right {
+                background-color: #04aa6d;
+                padding: 20px;
+                float: left;
+                width: 20px;/* A largura é 20px, por padão */
+            }
+            /* Use uma consulta de mídea para adicionar um ponto de interrupção em 800px: */
+            @media screen and (max-width: 800px) {
+                .left, .main, .right {width: 100% /* A largura é 100%, quando a viewport é 800px ou menor */}    
+            }                
+            
         </style>
 
         <!-- função JavaScript que é usada no id mudarTexto. -->
@@ -225,5 +255,53 @@
             <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Clique aqui para ver a data e a hora</button>
             <p id="demo"></p>
             <!-- a tag noscript define um conteúdo alternativo a ser exibido para usuários sem suporte a script -->
+            <hr>
+            <h2>Web design responsivo em HTML</h2>
+            
+            <h4>É criar páginas da web com boa aparência em todos os dispositivos</h4>
+            <h5>exemplo de imagens responsivas usando a propriedade width</h5>
+            <img src="img_girl.jpg" style="width: 100%;" alt="exemplo imagem responsiva">
+            <h3>Usando a propriedade max-width</h3>
+            <h4>será reduzida se necessário, mas nunca será ampliada para ficar maior que o tamanho original:</h4>
+            <img src="img_girl.jpg" style="max-width: 100%;height: auto;" alt="exemplo imagem responsiva">
+            <h3>Mostrar diferentes imagens depedendo da largura do navegador</h3>
+            <p>Redimensione a janela do navegador para ver como a imagem abaixo muda dependendo da largura:</p>
+            <picture>
+                <source srcset="img_smallflower.jpg" media="(max-width:600px)">
+                <source srcset="img_flowers.jpg" media="(max-width:1500px)">
+                <source srcset="img_flowers">
+                <img src="img_flowers.jpg" alt="flower" style="width: auto;">
+            </picture>
+            <h2 style="font-size: 10vw;">Texto responsivo</h2>
+
+            <p style="font-size: 5vw;">Redimensione a janela do navegador para ver como o tamanho do texto é dimensionado.</p>
+
+            <p style="font-size: 5vw;">Use a unidade "vw" ao dimensionar o texto. 10vw definirá o tamanho para 10% da largura da janela de visualização.</p>
+
+            <p>Viewport é o tamanho da janela do navegador. 1vw = 1% da largura da janela de visualização. Se a janela de visualização tiver 50 cm de largura, 1vw é 0,5 cm.</p>
+
+            <h3>Consulta de mídia</h3>
+            <p>redimencionar a janela do navegador.</p>
+
+            <p>Certifique-se de atingir o ponto de interrupção em 800px ao redimensionar este quadro.</p>
+
+            <div class="left">
+                <p>Menu Esquerdo</p>
+            </div>
+
+            <div class="main">
+                <p>Conteúdo principal</p>
+            </div>
+
+            <div class="right">
+                <p>conteúdo certo</p>
+            </div>
+
+            <h2>Demostração web design responsido - frameworks</h2>
+            <h3>W3.CSS</h3>
+            <iframe src="w3_css.html" name="iframe_b" style="border: 2px solid black; width: 100%; height: 400px;"></iframe>
+            <br>
+            <h2>Bootstrap</h2>
+            <iframe src="bootstrap.html" name="iframe_c" style="border: 2px solid black; width: 100%; height: 400px;"></iframe>
     </body>
 </html>
